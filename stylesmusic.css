@@ -1,0 +1,227 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #ffffff;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg,     #035bb94f, #00d0ff00);
+    color: #fff;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Efek blur */
+    border-radius: 20px; /* Border sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek 3D */
+    z-index: 1000; /* Agar header tetap di atas */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo dan Title di Header */
+.logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 27px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    width: 50px;
+    font-size: 14px;
+    margin-left: 600px;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url(bgpcp.jpg); /* Ganti dengan URL gambar Anda */
+    background-size: cover; /* Menutupi seluruh area dengan gambar latar */
+    background-position: center; /* Gambar terpusat dengan benar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    color: #fff; /* Warna teks putih untuk kontras */
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    font-size: 25pt;
+    z-index: 1;
+}
+
+.hero p {
+    font-weight: normal; /* Teks tidak bold */
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 1090px; /* Batas lebar maksimum */
+    word-wrap: inherit; /* Atur pemecahan kata jika perlu */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap untuk kontras */
+    z-index: 0;
+    border-radius: inherit; /* Mengikuti border sudut */
+}
+/* Main Content Styling */
+.main-content {
+    padding: 40px 20px;
+    text-align: center; /* Untuk menengahkan teks di dalam kontainer ini */
+}
+
+.playlist-heading {
+    margin-bottom: 20px; /* Jarak bawah dari heading ke elemen di bawahnya */
+    font-size: 24px; /* Ukuran font untuk heading */
+    font-weight: bold; /* Membuat heading lebih menonjol */
+}
+
+/* Playlist Section Styling */
+.playlist {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.playlist-title {
+    font-weight: normal; /* Teks tidak bold */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 20pt;
+    color: #ffcc00; /* Warna teks judul */
+    text-align: center;
+    font-weight: bold;
+}
+
+.playlist-item {
+    flex: 0 0 230px;
+    background: #70c8e8;
+    border-radius: 25px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #001845; /* Warna teks default */
+    text-decoration: none; /* Menghilangkan garis bawah dari link */
+}
+
+.playlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.playlist-item h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-size: 14pt;
+}
+
+.playlist-item p {
+    margin: 0;
+    font-size: 12pt;
+    color: #033e01;
+}
+
+.playlist-item:hover {
+    background: #95affc;
+    transform: scale(1.02);
+}
+
+.playlist-item:hover img {
+    transform: scale(1.1);
+}
+
+.playlist-item:focus {
+    outline: none; /* Menghilangkan outline default saat diklik */
+}
+
+/* Music Player Section Styling */
+.music-player-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background: rgb(29, 57, 77);
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+    transform: scale(1.1); /* Zoom effect saat hover */
+}
