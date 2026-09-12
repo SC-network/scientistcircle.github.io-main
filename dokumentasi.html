@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCNetwork - Dokumentasi</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0a9396;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: rotate(360deg);
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #94d2bd;
+        }
+
+        .container {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #005f73;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .media-item {
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .media-item:hover {
+            transform: scale(1.05);
+        }
+
+        .media-item img,
+        .media-item video {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-item p {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #0a9396;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .media-item img,
+            .media-item video {
+                width: 100%;
+                height: auto;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Scientist Circle">
+        <h2>Scientist Circle</h2>
+    </div>
+    <nav>
+        <a href="index.html">Beranda</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Dokumentasi Foto dan Video</h1>
+
+    <div class="media">
+        <div class="media-item">
+            <img src="rose.jpg" alt="Foto 1">
+            <p>SPRAY ROSEMARY</p>
+        </div>
+        <div class="media-item">
+            <img src="si4.jpg" alt="Foto 2">
+            <p>HIDROPONIK BERSAMA KAMPUS MENGAJAR (PUTRA)</p>
+        </div>
+        <div class="media-item">
+            <img src="si3.jpg" alt="Foto 1">
+            <p>HIDROPONIK BERSAMA KAMPUS MENGAJAR (PUTRI)</p>
+        </div>
+        <div class="media-item">
+            <img src="20240125_204551.jpg" alt="Foto 1">
+            <p>GUYONAN SC</p>
+        </div>
+        <div class="media-item">
+            <img src="ppsc.jpg" alt="Foto 1">
+            <p>PRA VIDEO PROFILE <SCript></SCript></p>
+        </div>
+        <div class="media-item">
+            <img src="ketu.jpg" alt="Foto 3">
+            <p>PERKUMPULAN KETUA ORGANISASI</p>
+        </div>
+    </div>      
+
+    <h2 style="margin-top: 40px; color: #005f73;">Video</h2>
+
+    <div class="media">
+        <div class="media-item">
+            <video controls>
+                <source src="presipa.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+            <p>PRESENTASI DIV. IPA</p>
+        </div>
+        <div class="media-item">
+            <video controls>
+                <source src="jargon.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+            <p>JARGON SC</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Scientist Circle. Semua Hak Dilindungi.
+</footer>
+
+</body>
+</html>

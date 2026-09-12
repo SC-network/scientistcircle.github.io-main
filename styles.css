@@ -1,0 +1,459 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.splash-screen h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.splash-screen p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 30%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    border-radius: 5px;
+    animation: loadingBar 3s forwards;
+}
+
+@keyframes loadingBar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px; /* Ukuran font dasar untuk seluruh teks */
+}
+
+body.dark-mode {
+    background: #000000;
+    color: #080808;
+}
+
+header {
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+header.dark-mode {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    
+    height: 60px; /* Sesuaikan dengan ukuran logo Anda */
+    margin-right: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: bottom right;
+}
+
+nav ul li a:hover {
+    color: #ffe600;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hero {
+    background-image: url(bg.jpg); /* Ganti dengan URL gambar Anda */
+    background-size: cover; /* Menutupi seluruh area dengan gambar latar */
+    background-position: center; /* Gambar terpusat dengan benar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    color: #fff; /* Warna teks putih untuk kontras */
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    text-align: center;
+}
+
+.hero.dark-mode {
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: auto;
+    animation: fadeInZoom 1s ease-out;
+}
+
+.hero.dark-mode .hero-content {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35pt;
+    margin-bottom: 3rem;
+    animation: fadeInZoom 1s ease-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero p {
+    font-size: 17pt; /* Ukuran font untuk isi */
+}
+
+.features {
+    padding: 3rem 2rem;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+    width: 30%;
+    margin: 1rem;
+    transition: transform 0.3s;
+}
+
+.card.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px; /* Ukuran font untuk isi card */
+}
+
+.vision-mission {
+    background: #fff;
+    padding: 3rem 2rem;
+}
+
+.vision-mission.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.vision-mission h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.vision-mission-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vision, .mission {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 45%;
+    margin: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vision.dark-mode, .mission.dark-mode {
+    background: #2e2e2e;
+    color: #e0e0e0;
+}
+
+.vision:hover, .mission:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.vision h3, .mission h3 {
+    margin-bottom: 1rem;
+}
+
+.vision p, .mission ul {
+    line-height: 1.6;
+    font-size: 14px; /* Ukuran font untuk isi vision dan mission */
+}
+
+.mission ul {
+    padding-left: 1.5rem;
+}
+
+.program-kerja {
+    background: #fff;
+    padding: 3rem 2rem;
+}
+
+.program-kerja.dark-mode {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.program-kerja h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.program-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.program-item {
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 45%;
+    margin: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-item.dark-mode {
+    background: #2e2e2e;
+    color: #e0e0e0;
+}
+
+.program-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.program-item h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.divisions {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    background-color: #f8f8f8;
+}
+
+.division {
+    text-align: center;
+    width: 20%;
+    margin: 1rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.division img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.division h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.division p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.division:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+footer {
+    background-color: #a8a8a8; /* Warna latar belakang footer */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #333; /* Warna teks copyright */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon img {
+    width: 30px; /* Ukuran ikon media sosial */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #7c7c7c;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+}

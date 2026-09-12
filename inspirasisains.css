@@ -1,0 +1,140 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #ffffff;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+header.dark-mode {
+    background: linear-gradient(135deg, #333, #555);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    
+    height: 60px; /* Sesuaikan dengan ukuran logo Anda */
+    margin-right: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: bottom right;
+}
+
+nav ul li a:hover {
+    color: #ffe600;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+section.playlist {
+    padding: 4rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.playlist h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #2E8B57;
+}
+
+.song-list {
+    display:list-item;
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 3rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    section.playlist h2 {
+        font-size: 2rem;
+    }
+
+    .song-list {
+        grid-template-columns: 1fr;
+    }
+}
