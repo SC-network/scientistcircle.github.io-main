@@ -393,6 +393,13 @@ nav ul li a:hover::before {
     margin-bottom: 1rem;
 }
 
+.div-h2{
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-top: 7px;
+    font-size: 30px;
+}
+
 .division h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
