@@ -1,0 +1,179 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #cce4f6);
+}
+
+header {
+    background: linear-gradient(135deg, #007bff, #00d2ff);
+    color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 10pt;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.logo {
+     width: 80px;
+    height: auto;
+    margin-right: 10px;
+    animation: fade-in 2s infinite;
+}
+
+.site-title {
+    margin: 1;
+    font-size: 20pt;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.news-article {
+    display: flex;
+    flex-direction: row ;
+    align-items: center; /* Memastikan gambar dan teks sejajar secara vertikal */
+    gap: 70px; /* Jarak antara gambar dan teks */
+    margin-bottom: 60px; /* Jarak antar-baris di bawahnya */
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #001845; /* Warna teks default */
+    text-decoration: none; /* Menghilangkan garis bawah dari link */
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color:white;
+    height: 100%;
+    width: 96%;
+}
+
+.news-article hover{
+    scale: 20px;
+}
+
+.news-article img{
+    size: auto;
+}
+
+.news-image {
+    width: 40%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius:20px;
+    height: 35%;
+    width: 35%;
+}
+
+.news-content {
+    padding: 30px;
+    font-size: 13pt;
+    flex: 1;
+}
+
+.news-content h2 {
+    margin: 0;
+    font-size: 16pt;
+    color: #333;
+}
+
+.news-date {
+    color: #888;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.newsdate-link {
+    text-decoration: none;
+}
+
+.newsdate-link:hover{
+    color:#007bff;
+    transform: scale(1.1);
+    text-decoration:underline;
+    transition-duration: 1s;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.Galva-tutorial {
+    text-decoration: none;
+}
+
+.Galva-tutorial:hover {
+    transform: scale(1.1);
+    color:#00d2ff;
+    transition-duration: 10ms;
+}

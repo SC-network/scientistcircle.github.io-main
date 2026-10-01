@@ -200,6 +200,7 @@ nav ul li a:hover::before {
     font-size: 35pt;
     margin-bottom: 3rem;
     animation: fadeInZoom 1s ease-out;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeInText {
@@ -215,6 +216,7 @@ nav ul li a:hover::before {
 
 .hero p {
     font-size: 17pt; /* Ukuran font untuk isi */
+    text-shadow: 2px 2px 5px rgb(98, 222, 238)
 }
 
 .features {

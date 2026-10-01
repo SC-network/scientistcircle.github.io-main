@@ -4,85 +4,67 @@
     <meta charset="UTF-8">
     <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCHarmony - Remix Edition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="inspirasisains.css">
+    <title>SCLabs - Chemiluminescence</title>
+    <link rel="stylesheet" href="styledj.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="logo.png" alt="Scientist Circle Logo" class="logo">
-            <h1>Scientist Circle Harmony</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="scmusic.html">Playlist</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="scmusic.html">SCIENCE-LAB</a></li>
+                <!-- Tambahkan menu lainnya jika perlu -->
+            </ul>
+        </nav>
+        <div class="header-logo">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="site-title">Chemiluminescence</h1>
         </div>
     </header>
-
-    <section class="playlist">
-        <h2>Playlist Edisi Remix </h2>
-        <div class="song-list">
-            <!-- Spotify Player -->
-            <div class="song">
-                <div class="thumbnail">
+    <main>
+        <section class="news-container">
+            <article class="news-article">
+                <img src="chemi-1.jpg" alt="Berita 1" class="news-image">
+                <div class="news-content">
+                    <h2>PENGERTIAN</h2>
+                    <p> Cairan chemiluminescence adalah larutan kimia yang menghasilkan pancaran cahaya tampak langsung dari reaksi kimia tanpa menghasilkan panas sama sekali (cold light). Cairan ini umumnya terdiri dari bahan bakar organik (seperti fenil oksalat ester atau luminol), zat pengoksidasi (hidrogen peroksida), katalis, dan zat pewarna fluoresen yang disimpan terpisah sebelum digunakan.</p>
                 </div>
-                <div class="player">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2zzThRtBTGwtEZJSCHyqYO?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </article>
+            <article class="news-article">
+                <img src="chemi-2.jpg" alt="Berita 1" class="news-image">
+                <div class="news-content">
+                    <h2>KONSEP KERJA</h2>
+                    <p>Prinsip kerja cairan ini didasarkan pada eksitasi elektron dan pelepasan foton. Ketika komponen dicampur, reaksi kimia akan membentuk molekul antara yang tidak stabil dan berada dalam tingkat energi tinggi (excited state). Saat molekul tersebut mentransfer energinya ke zat pewarna dan elektron di dalamnya kembali turun ke tingkat energi dasar (ground state), kelebihan energi tersebut langsung dilepaskan dalam bentuk partikel cahaya (foton) dengan warna yang sesuai dengan jenis pewarna yang digunakan.
+                    </p>
                 </div>
-            </div>
-
-            <!-- SoundCloud Player -->
-            <div class="song">
-                <div class="thumbnail">
+            </article>
+            <article class="news-article">
+                <img src="chemi-3.jpg" alt="Berita 1" class="news-image">
+                <div class="news-content">
+                    <h2>KIMIA SAINS DIBALIK KECANTIKAN</h2>
+                    <p>Secara proses kimia, reaksi redoks terjadi ketika fenil oksalat ester dioksidasi oleh hidrogen peroksida. Reaksi ini menghasilkan senyawa antara berstruktur cincin yang sangat tidak stabil bernama 1,2-dioksietanadione. Senyawa ini segera terurai menjadi dua molekul karbon dioksida (CO2) sambil memutus ikatan kimianya. Pemutusan ikatan secara instan tersebut melepaskan energi kimia dalam jumlah besar, yang kemudian diserap oleh elektron zat pewarna fluoresen untuk memicu pendaran cahaya benderang.
+                    </p>
                 </div>
-                <div class="player">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3sLsD2BxGa3aVxBmJBG8vR?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </article>
+            <article class="news-article">
+                    <video width="560" height="315" controls class="news-image">
+                         <source src="chemi-video.mp4" type="video/mp4">
+                          Browser Anda tidak mendukung tag video.
+                    </video>
+                <div class="news-content">
+                    <h2>Cara Kerja dan Teknis Pembuatan</h2>
+                    <p class="news-date">Source:
+                        <a href="https://www.youtube.com/@13mod72" class="newsdate-link">13mod7</a>
+                    </p>
+                    <p>Simak video berikut mengenai pembuatan Lavalamp<b>
+                    </p>
                 </div>
-            </div>
-
-            <!-- Add more songs as needed -->
-            <div class="song">
-                <div class="thumbnail">
-                </div>
-                <div class="player">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/368N3KVHiCc2hwNzt3S9Pk?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-
-            <div class="song">
-                <div class="thumbnail">
-                </div>
-                <div class="player">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5gzJyb6lak3XNSZYFaJ3h6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-
-            <div class="song">
-                <div class="thumbnail">
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1QX1nNmlA1f5aBHbo0szaJ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-            
-            <div class="song">
-                <div class="thumbnail">
-                </div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/43PidH0JPXIsKEpj93nnRO?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            </div>
-        </div>
-    </section>
-
+            </article>
+            <!-- Tambahkan artikel berita lainnya di sini -->
+        </section>
+    </main>
     <footer>
-        <p>Hak Cipta © 2024 Scientist Circle. Semua hak dilindungi.</p>
+        <p>&copy; 2026 Chemiluminescence. Semua hak cipta dilindungi.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

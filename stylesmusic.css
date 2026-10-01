@@ -161,7 +161,7 @@ nav ul li a:hover {
     gap: 100px; /* Jarak antara gambar dan teks */
     margin-bottom: 60px; /* Jarak antar-baris di bawahnya */
     transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     color: #001845; /* Warna teks default */
     text-decoration: none; /* Menghilangkan garis bawah dari link */
     border-radius: 20px;

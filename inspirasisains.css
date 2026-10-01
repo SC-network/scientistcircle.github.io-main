@@ -82,24 +82,53 @@ main {
 }
 
 .news-container {
-    max-width: 1500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    overflow-x: auto;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .news-article {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     display: flex;
+    flex-direction: row ;
+    align-items: center; /* Memastikan gambar dan teks sejajar secara vertikal */
+    gap: 70px; /* Jarak antara gambar dan teks */
+    margin-bottom: 60px; /* Jarak antar-baris di bawahnya */
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #001845; /* Warna teks default */
+    text-decoration: none; /* Menghilangkan garis bawah dari link */
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color:white;
+    height: 100%;
+    width: 96%;
+}
+
+.news-article hover{
+    scale: 20px;
+}
+
+.news-article img{
+    size: auto;
 }
 
 .news-image {
     width: 40%;
     object-fit: cover;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius:20px;
+    height: 35%;
+    width: 35%;
 }
 
 .news-content {
@@ -117,6 +146,18 @@ main {
 .news-date {
     color: #888;
     margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.newsdate-link {
+    text-decoration: none;
+}
+
+.newsdate-link:hover{
+    color:#007bff;
+    transform: scale(1.1);
+    text-decoration:underline;
+    transition-duration: 1s;
 }
 
 footer {
@@ -125,5 +166,14 @@ footer {
     text-align: center;
     padding: 10px;
     position: relative;
-    bottom: 0;
+}
+
+.Galva-tutorial {
+    text-decoration: none;
+}
+
+.Galva-tutorial:hover {
+    transform: scale(1.1);
+    color:#00d2ff;
+    transition-duration: 10ms;
 }
