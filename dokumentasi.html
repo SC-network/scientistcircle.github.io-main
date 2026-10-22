@@ -5,6 +5,7 @@
     <link rel="icon" href="logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCNetwork - Dokumentasi</title>
+    <script src="theme.js"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -109,6 +110,10 @@
             font-size: 14px;
         }
 
+        .section-title {
+            color: #005f73;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .media-item img,
@@ -126,19 +131,19 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html">
-        <img src="logo.png" alt="Logo Scientist Circle">
-        </a>
+        <a href="index.html"> </a>
         <img src="logo.png" alt="Logo Scientist Circle">
         <h2>Scientist Circle</h2>
     </div>
     <nav>
         <a href="index.html">Beranda</a>
+        <button class="theme-toggle" type="button" aria-label="Ubah ke tema gelap" aria-pressed="false">🌙</button>
     </nav>
 </header>
 
@@ -172,7 +177,7 @@
         </div>
     </div>      
 
-    <h2 style="margin-top: 40px; color: #005f73;">Video</h2>
+    <h2 class="section-title" style="margin-top: 40px;">Video</h2>
 
     <div class="media">
         <div class="media-item">
@@ -193,7 +198,7 @@
 </div>
 
 <footer>
-    &copy; 2024 Scientist Circle. Semua Hak Dilindungi.
+    &copy; 2026 Scientist Circle. Semua Hak Dilindungi.
 </footer>
 
 </body>

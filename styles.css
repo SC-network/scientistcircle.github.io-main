@@ -77,10 +77,6 @@ body {
     font-size: 14px; /* Ukuran font dasar untuk seluruh teks */
 }
 
-body.dark-mode {
-    background: #000000;
-    color: #080808;
-}
 
 header {
     background: linear-gradient(135deg, #007bff, #00d2ff);
@@ -90,9 +86,6 @@ header {
     transition: background-color 0.3s;
 }
 
-header.dark-mode {
-    background: linear-gradient(135deg, #333, #555);
-}
 
 header .container {
     display: flex;
@@ -170,9 +163,6 @@ nav ul li a:hover::before {
     text-align: center;
 }
 
-.hero.dark-mode {
-    color: #ffffff;
-}
 
 .hero-content {
     max-width: 1000px;
@@ -180,9 +170,6 @@ nav ul li a:hover::before {
     animation: fadeInZoom 1s ease-out;
 }
 
-.hero.dark-mode .hero-content {
-    background: rgba(0, 0, 0, 0.8);
-}
 
 @keyframes fadeInZoom {
     0% {
@@ -246,10 +233,6 @@ nav ul li a:hover::before {
     transition: transform 0.3s;
 }
 
-.card.dark-mode {
-    background: #1e1e1e;
-    color: #e0e0e0;
-}
 
 .card:hover {
     transform: translateY(-10px);
@@ -274,10 +257,6 @@ nav ul li a:hover::before {
     padding: 3rem 2rem;
 }
 
-.vision-mission.dark-mode {
-    background: #1e1e1e;
-    color: #e0e0e0;
-}
 
 .vision-mission h2 {
     text-align: center;
@@ -301,10 +280,6 @@ nav ul li a:hover::before {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.vision.dark-mode, .mission.dark-mode {
-    background: #2e2e2e;
-    color: #e0e0e0;
-}
 
 .vision:hover, .mission:hover {
     transform: scale(1.05);
@@ -329,10 +304,6 @@ nav ul li a:hover::before {
     padding: 3rem 2rem;
 }
 
-.program-kerja.dark-mode {
-    background: #1e1e1e;
-    color: #e0e0e0;
-}
 
 .program-kerja h2 {
     text-align: center;
@@ -356,10 +327,6 @@ nav ul li a:hover::before {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.program-item.dark-mode {
-    background: #2e2e2e;
-    color: #e0e0e0;
-}
 
 .program-item:hover {
     transform: scale(1.05);
@@ -465,4 +432,110 @@ footer {
     cursor: pointer;
     padding: 0.5rem;
     margin-left: auto;
+}
+
+/* =========================================================
+   TEMA GELAP
+   Class "dark-mode" dipasang di <html> oleh script.js,
+   jadi semua selector memakai prefix "html.dark-mode".
+   ========================================================= */
+html {
+    color-scheme: light;
+}
+
+html.dark-mode {
+    color-scheme: dark;
+}
+
+body,
+.vision-mission,
+.vision,
+.mission,
+.program-kerja,
+.program-item,
+.divisions,
+.division,
+.div-h2,
+.card,
+footer,
+.splash-screen {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+html.dark-mode body {
+    background: #121212;
+    color: #e6e6e6;
+}
+
+html.dark-mode header {
+    background: linear-gradient(135deg, #1f2a38, #2d3e50);
+}
+
+html.dark-mode .theme-toggle {
+    color: #f5d76e;
+}
+
+html.dark-mode .hero {
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+html.dark-mode .vision-mission,
+html.dark-mode .program-kerja {
+    background: #1a1a1a;
+    color: #e6e6e6;
+}
+
+html.dark-mode .vision,
+html.dark-mode .mission,
+html.dark-mode .program-item,
+html.dark-mode .card {
+    background: #262626;
+    color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .card p,
+html.dark-mode .division p {
+    color: #b5b5b5;
+}
+
+html.dark-mode .divisions,
+html.dark-mode .div-h2 {
+    background-color: #121212;
+    color: #e6e6e6;
+}
+
+html.dark-mode .division {
+    background-color: #262626;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+html.dark-mode .footer-content p {
+    color: #b5b5b5;
+}
+
+html.dark-mode .splash-screen {
+    background: #121212;
+    color: #e6e6e6;
+}
+
+html.dark-mode .progress-bar {
+    background: #333;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #ffe600;
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
 }
